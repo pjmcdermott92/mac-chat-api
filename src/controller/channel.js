@@ -44,7 +44,7 @@ export default({ config, db }) => {
 
   // '/vq/channel/:id' -Delete
   api.delete('/:id', authenticate, (req, res) => {
-    User.remove({
+    Channel.remove({
       _id: req.params.id
     }, (err, channel) => {
       if (err) {
