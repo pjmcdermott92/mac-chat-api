@@ -35,9 +35,9 @@ export default({ config, db }) => {
       message.messageBody = req.body.messageBody;
       message.userId = req.body.userId;
       message.channelId = req.body.channelId;
-      newMessage.userName = req.body.userName;
-      newMessage.userAvatar = req.body.userAvatar;
-      newMessage.userAvatarColor = req.body.userAvatarColor;
+      message.userName = req.body.userName;
+      message.userAvatar = req.body.userAvatar;
+      message.userAvatarColor = req.body.userAvatarColor;
 
       message.save(err => {
         if (err) {
